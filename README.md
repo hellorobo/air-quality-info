@@ -44,7 +44,7 @@ The supported Linux distributions:
 
 ### Web server configuration
 
-The web server should redirect all the requests for unknown paths to the [htdocs/index.php](htdocs/index.php). For Apache2, there's already a [.htaccess](htdocs/.htaccess) file (requires mod_rewrite). For the nginx, there's a [sample configuration available](docs/sample-nginx.conf).
+The web server should redirect all the requests for unknown paths to the [htdocs/index.php](htdocs/index.php). For Apache2, there's already a [.htaccess](htdocs/.htaccess) file (requires mod_rewrite). For the nginx, there's a [sample configuration available](docker/nginx-default-site).
 
 ### Deployment
 

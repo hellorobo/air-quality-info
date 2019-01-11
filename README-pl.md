@@ -77,7 +77,7 @@ Informacje z sekcji "Configuration" należy przepisać do ustawień czujnika. Vo
 
 ### Konfiguracja serwera WWW
 
-Serwer WWW powinien przekierować wszystkie żądania do nieznanych ścieżek do strony [htdocs/index.php](htdocs/index.php). Apache2 będzie skonfigurowany automatycznie dzięki dołączonemu plikowi [.htaccess](htdocs/.htaccess) (wymaga mod_rewrite). Dla nginxa, dostępna jest [przykładowa konfiguracja](docs/sample-nginx.conf).
+Serwer WWW powinien przekierować wszystkie żądania do nieznanych ścieżek do strony [htdocs/index.php](htdocs/index.php). Apache2 będzie skonfigurowany automatycznie dzięki dołączonemu plikowi [.htaccess](htdocs/.htaccess) (wymaga mod_rewrite). Dla nginxa, dostępna jest [przykładowa konfiguracja](docker/nginx-default-site).
 
 ### Kroki instalacji
 

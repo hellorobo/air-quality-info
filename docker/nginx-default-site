@@ -1,9 +1,9 @@
 server {
-    listen 80;
+    listen 80 default_server;
 
-	server_name name.of.your.server;
-	root /path/to/the/files;
-	index index.php;
+    server_name _;
+    root /var/www/air-quality-info;
+    index index.php;
 
     location / {
             try_files $uri $uri/ /index.php?$args;

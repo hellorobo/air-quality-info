@@ -1,7 +1,16 @@
-FROM php:7.2-apache
+FROM debian:stretch
 
-RUN apt-get update && apt-get install -y \
-    librrd-dev \
-    && pecl install rrd \
-    && docker-php-ext-enable rrd \
-    && a2enmod rewrite
+ENV DEBIAN_FRONTEND="noninteractive"
+RUN apt-get update -qq && apt-get install -qq nginx php-fpm php-rrd
+
+COPY --chown=www-data:www-data htdocs /var/www/air-quality-info
+COPY docker/nginx-default-site /etc/nginx/sites-available/default
+COPY docker/run.sh /
+
+ENV username ""
+ENV password ""
+ENV sensor_id ""
+VOLUME /var/www/air-quality-info/data
+EXPOSE 80
+
+CMD [ "/run.sh" ]
